@@ -17,10 +17,10 @@ app.get('/api', (req, res) => {
     const utc_time = new Date().toISOString();
   
     //github url of the file
-    const github_file_url = 'https://github.com/YourUsername/YourRepository/blob/main/your-folder/your-file.js';
+    const github_file_url = "https://github.com/Mickabtech/hngxstage1/blob/main/app.js";
   
     //github url of the source code
-    const github_repo_url = 'https://github.com/mickabtech/YourRepository';
+    const github_repo_url = "https://github.com/Mickabtech/hngxstage1";
   
     //responseJson file
     const response = {
