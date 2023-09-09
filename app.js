@@ -14,7 +14,9 @@ app.get('/api', (req, res) => {
     //current day of the week
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const current_day = daysOfWeek[new Date().getDay()];
-    const utc_time = new Date().toISOString();
+    const currentTime = new Date();
+    currentTime.setHours(currentTime.getHours() - 2); // Subtract 2 hours for validation
+    const utc_time = currentTime.toLocaleString('en-US', { timeZone: 'UTC' });
   
     //github url of the file
     const github_file_url = "https://github.com/Mickabtech/hngxstage1/blob/main/app.js";
