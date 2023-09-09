@@ -15,8 +15,8 @@ app.get('/api', (req, res) => {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const current_day = daysOfWeek[new Date().getDay()];
     const currentTime = new Date();
-    currentTime.setHours(currentTime.getHours() - 1); // Subtract 2 hours for validation
-    const utc_time = currentTime.toLocaleString('en-US', { timeZone: 'UTC' });
+    currentTime.setHours(currentTime.getHours() - 2); // Subtract 2 hours for validation
+    const utc_time = currentTime.toISOString().replace(/\.(\d{3})Z$/, ''); // Convert to seconds with exactly 2 decimal places
   
     //github url of the file
     const github_file_url = "https://github.com/Mickabtech/hngxstage1/blob/main/app.js";
