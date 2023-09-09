@@ -15,7 +15,8 @@ app.get('/api', (req, res) => {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const current_day = daysOfWeek[new Date().getDay()];
     const currentTime = new Date();
-    currentTime.setHours(currentTime.getHours() +2); //
+    currentTime.setHours(currentTime.getHours() +1); //
+    currentTime.setMinutes(currentTime.getMinutes() +1)
     const utc_time = currentTime.toISOString().replace(/\.(\d{3})Z$/, '');
   
     //github url of the file
