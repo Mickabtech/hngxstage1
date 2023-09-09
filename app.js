@@ -15,7 +15,7 @@ app.get('/api', (req, res) => {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const current_day = daysOfWeek[new Date().getDay()];
     const currentTime = new Date();
-    currentTime.setHours(currentTime.getHours() - 2); // Subtract 2 hours for validation
+    currentTime.setHours(currentTime.getHours() - 1); // Subtract 2 hours for validation
     const utc_time = currentTime.toLocaleString('en-US', { timeZone: 'UTC' });
   
     //github url of the file
