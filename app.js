@@ -17,7 +17,7 @@ app.get('/api', (req, res) => {
     const currentTime = new Date();
     currentTime.setHours(currentTime.getHours() +1); //
     currentTime.setMinutes(currentTime.getMinutes() +1)
-    const utc_time = currentTime.toISOString().replace(/\.(\d{3})Z$/, '');
+    const utc_time = currentTime.toISOString().replace(/\.(\d{3})$/, '');
   
   
     //github url of the file
